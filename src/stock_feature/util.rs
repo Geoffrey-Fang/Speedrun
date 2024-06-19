@@ -17,7 +17,6 @@ pub fn fetch_data<T: for<'a> Deserialize<'a>>(url: &str, params: &HashMap<&str, 
     match response {
         Ok(response) => {
             let body = response.into_string().unwrap();
-            println!("{}", body);
             let data: T = serde_json::from_str(body.as_str()).unwrap();
             return Ok(data)
         }

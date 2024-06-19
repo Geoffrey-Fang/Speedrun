@@ -7,6 +7,5 @@ fn main() -> Result<(), Box<dyn Error>> {
         Ok((r, c, l)) => handleClsTelegraph(r, c, l),
         Err(_) => todo!(),
     }
-
     Ok(())
 }
